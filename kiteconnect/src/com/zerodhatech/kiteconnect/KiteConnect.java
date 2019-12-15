@@ -496,13 +496,13 @@ public class KiteConnect {
      * @throws IOException is thrown when there is connection error.
      * @throws JSONException is thrown when there is exception while parsing response.
      * */
-    public GTT cancelGTT(int gttId) throws IOException, KiteException, JSONException {
-        String url = routes.get("gtt.delete").replace(":id", gttId+"");
-        JSONObject response  = kiteRequestHandler.deleteRequest(url, new HashMap<>(), apiKey, accessToken);
-        GTT gtt = new GTT();
-        gtt.id = response.getJSONObject("data").getInt("trigger_id");
-        return gtt;
-    }
+//    public GTT cancelGTT(int gttId) throws IOException, KiteException, JSONException {
+//        String url = routes.get("gtt.delete").replace(":id", gttId+"");
+//        JSONObject response  = kiteRequestHandler.deleteRequest(url, new HashMap<>(), apiKey, accessToken);
+//        GTT gtt = new GTT();
+//        gtt.id = response.getJSONObject("data").getInt("trigger_id");
+//        return gtt;
+//    }
 
     /** Returns list of different stages an order has gone through.
      * @return List of multiple stages an order has gone through in the system.
